@@ -1,51 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Press Card Verification</title>
+<title>Press Card</title>
 <style>
-body {font-family: Arial, sans-serif; background:#f4f4f4; display:flex; justify-content:center; align-items:center; height:100vh; margin:0;}
-.card {background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); text-align:center; width:320px;}
-h2 {color:#0d47a1; margin-bottom:15px;}
-p {margin:8px 0; font-size:16px; text-align:left;}
-.error {color:red; font-weight:bold; text-align:center;}
-b {color:#333;}
+body{font-family:Arial;background:#f4f4f4;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}
+.card{background:white;padding:25px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.2);width:320px}
+h2{color:#0d47a1;text-align:center}
+p{margin:10px 0;font-size:16px}
 </style>
 </head>
 <body>
-<div class="card" id="card">
-<h2>Loading...</h2>
+<div class="card">
+<h2>Press Card Verified ✅</h2>
+<div id="info"></div>
 </div>
-
 <script>
-const data = {
-  "RME100-03-26": {
-    name: "Umar Raza",
-    cnic: "32304-1234567-8",
-    designation: "PRESS REPORTER",
-    city: "MULTAN",
-    issueDate: "31/05/2026",
-    validUntil: "31/05/2027",
-    owner: "RANA SOHAIL NAWAZ"
-  },
-  "RME100-04-26": {
-    name: "M Shahid",
-    cnic: "36302-1075574-7",
-    designation: "PRESS REPORTER",
-    city: "MULTAN",
-    issueDate: "31/05/2026",
-    validUntil: "31/05/2027",
-    owner: "RANA SOHAIL NAWAZ"
-  }
+var id = new URLSearchParams(window.location.search).get("id");
+var data = {
+"RME100-03-26":"<p><b>Name:</b> Umar Raza</p><p><b>CNIC:</b> 32304-1234567-8</p><p><b>Designation:</b> PRESS REPORTER</p><p><b>City:</b> MULTAN</p><p><b>Issue Date:</b> 31/05/2026</p><p><b>Valid Until:</b> 31/05/2027</p><p><b>Owner:</b> RANA SOHAIL NAWAZ</p><p><b>Card ID:</b> RME100-03-26</p>",
+"RME100-04-26":"<p><b>Name:</b> M Shahid</p><p><b>CNIC:</b> 36302-1075574-7</p><p><b>Designation:</b> PRESS REPORTER</p><p><b>City:</b> MULTAN</p><p><b>Issue Date:</b> 31/05/2026</p><p><b>Valid Until:</b> 31/05/2027</p><p><b>Owner:</b> RANA SOHAIL NAWAZ</p><p><b>Card ID:</b> RME100-04-26</p>"
 };
-
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
-const cardDiv = document.getElementById("card");
-
-if(data[id]) {
-  cardDiv.innerHTML = `
-    <h2>Press Card Verified ✅</h2>
-    <p><b>Name:</b> ${data[id].name}</p>
-    <p><b>
+document.getElementById("info").innerHTML = data[id] || "<p style='color:red;text-align:center'>404 - Card Not Found</p>";
+</script>
+</body>
+</html>
