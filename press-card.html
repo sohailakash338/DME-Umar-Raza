@@ -1,59 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Multan Express - Verification Portal</title>
+<title>Daily Multan Express - Verification</title>
 <style>
-body{font-family:'Segoe UI',Arial;background:#e8f0fe;display:flex;justify-content:center;align-items:center;min-height:100vh;margin:0;padding:20px}
-.card{background:white;padding:30px;border-radius:15px;box-shadow:0 4px 20px rgba(0,0,0,0.15);width:100%;max-width:380px;text-align:center;border-top:5px solid #0d47a1}
-h1{color:#0d47a1;font-size:22px;margin:0 0 5px 0}
-h3{color:#666;font-size:14px;margin:0 0 20px 0;font-weight:normal}
-h2{color:#2e7d32;font-size:18px;margin:20px 0 15px 0}
-.info{text-align:left;margin-top:15px}
-p{margin:10px 0;font-size:15px;color:#333}
+body{font-family:Arial;background:#e8f0fe;display:flex;justify-content:center;align-items:center;min-height:100vh;margin:0}
+.card{background:white;padding:30px;border-radius:15px;width:350px;text-align:center;border-top:5px solid #0d47a1}
+h1{color:#0d47a1;font-size:20px;margin:0}
+h3{color:#666;font-size:13px;margin:5px 0 20px 0}
+p{margin:8px 0;text-align:left;font-size:15px}
 b{color:#0d47a1}
-.footer{margin-top:20px;padding-top:15px;border-top:2px solid #e0e0e0;color:#2e7d32;font-weight:bold;font-size:16px}
-.error{color:#d32f2f;font-weight:bold;font-size:18px}
-.logo{font-size:40px;margin-bottom:10px}
+.footer{margin-top:20px;padding-top:15px;border-top:2px solid #e0e0e0;color:#2e7d32;font-weight:bold}
 </style>
 </head>
 <body>
-<div class="card" id="card">
-<div class="logo">📰</div>
+<div class="card">
 <h1>DAILY MULTAN EXPRESS</h1>
 <h3>VERIFICATION PORTAL</h3>
-<div id="data">Loading...</div>
+<div id="d"></div>
 </div>
-
 <script>
-var params = new URLSearchParams(window.location.search);
-var id = params.get("id");
-
-var records = {
-"RME100-03-26": {
-name: "Umar Raza",
-cnic: "32304-1234567-8",
-designation: "PRESS REPORTER",
-city: "MULTAN",
-issue: "31/05/2026",
-valid: "31/05/2027",
-owner: "RANA SOHAIL NAWAZ"
-},
-"RME100-04-26": {
-name: "M Shahid",
-cnic: "36302-1075574-7",
-designation: "PRESS REPORTER",
-city: "MULTAN",
-issue: "31/05/2026",
-valid: "31/05/2027",
-owner: "RANA SOHAIL NAWAZ"
-}
+var id = new URLSearchParams(location.search).get("id");
+var x = {
+"RME100-03-26":"<h2 style='color:#2e7d32'>Press Card Verified ✅</h2><p><b>Name:</b> Umar Raza</p><p><b>CNIC:</b> 32304-1234567-8</p><p><b>Designation:</b> PRESS REPORTER</p><p><b>City:</b> MULTAN</p><p><b>Issue Date:</b> 31/05/2026</p><p><b>Valid Until:</b> 31/05/2027</p><p><b>Owner:</b> RANA SOHAIL NAWAZ</p><p><b>Card ID:</b> RME100-03-26</p><div class='footer'>This Card is Verified</div>",
+"RME100-04-26":"<h2 style='color:#2e7d32'>Press Card Verified ✅</h2><p><b>Name:</b> M Shahid</p><p><b>CNIC:</b> 36302-1075574-7</p><p><b>Designation:</b> PRESS REPORTER</p><p><b>City:</b> MULTAN</p><p><b>Issue Date:</b> 31/05/2026</p><p><b>Valid Until:</b> 31/05/2027</p><p><b>Owner:</b> RANA SOHAIL NAWAZ</p><p><b>Card ID:</b> RME100-04-26</p><div class='footer'>This Card is Verified</div>"
 };
-
-var div = document.getElementById("data");
-if(records[id]) {
-var r = records[id];
-div.innerHTML = `
-<h2>Press Card Verified ✅</h2>
-<div class
+document.getElementById("d").innerHTML = x[id] || "<p style='color:red;text-align:center'>404 - Card Not Found</p>";
+</script>
+</body>
+</html>
