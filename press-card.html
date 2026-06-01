@@ -6,10 +6,11 @@
 <title>Press Card Verification</title>
 <style>
 body {font-family: Arial, sans-serif; background:#f4f4f4; display:flex; justify-content:center; align-items:center; height:100vh; margin:0;}
-.card {background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); text-align:center; width:300px;}
-h2 {color:#0d47a1;}
-p {margin:8px 0; font-size:16px;}
-.error {color:red; font-weight:bold;}
+.card {background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); text-align:center; width:320px;}
+h2 {color:#0d47a1; margin-bottom:15px;}
+p {margin:8px 0; font-size:16px; text-align:left;}
+.error {color:red; font-weight:bold; text-align:center;}
+b {color:#333;}
 </style>
 </head>
 <body>
@@ -19,4 +20,32 @@ p {margin:8px 0; font-size:16px;}
 
 <script>
 const data = {
-  "RME100-03-
+  "RME100-03-26": {
+    name: "Umar Raza",
+    cnic: "32304-1234567-8",
+    designation: "PRESS REPORTER",
+    city: "MULTAN",
+    issueDate: "31/05/2026",
+    validUntil: "31/05/2027",
+    owner: "RANA SOHAIL NAWAZ"
+  },
+  "RME100-04-26": {
+    name: "M Shahid",
+    cnic: "36302-1075574-7",
+    designation: "PRESS REPORTER",
+    city: "MULTAN",
+    issueDate: "31/05/2026",
+    validUntil: "31/05/2027",
+    owner: "RANA SOHAIL NAWAZ"
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const cardDiv = document.getElementById("card");
+
+if(data[id]) {
+  cardDiv.innerHTML = `
+    <h2>Press Card Verified ✅</h2>
+    <p><b>Name:</b> ${data[id].name}</p>
+    <p><b>
