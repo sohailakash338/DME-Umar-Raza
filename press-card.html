@@ -1,32 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="ur">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Multan Express - Verification</title>
+<title>Daily Multan Express - روزنامہ ملتان ایکسپریس</title>
 <style>
-body{font-family:Arial;background:#e8f0fe;display:flex;justify-content:center;align-items:center;min-height:100vh;margin:0}
-.card{background:white;padding:30px;border-radius:15px;width:350px;text-align:center;border-top:5px solid #0d47a1}
-h1{color:#0d47a1;font-size:20px;margin:0}
-h3{color:#666;font-size:13px;margin:5px 0 20px 0}
-p{margin:8px 0;text-align:left;font-size:15px}
-b{color:#0d47a1}
-.footer{margin-top:20px;padding-top:15px;border-top:2px solid #e0e0e0;color:#2e7d32;font-weight:bold}
+body{margin:0;font-family:'Jameel Noori Nastaleeq', Arial;background:#f5f5f5}
+.header{background:#0d47a1;color:white;padding:20px;text-align:center}
+.header h1{margin:0;font-size:32px}
+.header p{margin:5px 0 0 0;font-size:14px}
+.container{max-width:900px;margin:20px auto;padding:20px;background:white;border-radius:8px}
+.news-box{border-bottom:1px solid #ddd;padding:15px 0}
+.news-box h2{color:#0d47a1;margin:0 0 10px 0;font-size:22px}
+.news-box p{color:#333;line-height:1.8;margin:0}
+.footer{background:#0d47a1;color:white;text-align:center;padding:20px;margin-top:30px}
+.footer p{margin:0;color:white}
 </style>
 </head>
 <body>
-<div class="card">
-<h1>DAILY MULTAN EXPRESS</h1>
-<h3>VERIFICATION PORTAL</h3>
-<div id="d"></div>
+<div class="header">
+<h1>روزنامہ ملتان ایکسپریس</h1>
+<p>DAILY MULTAN EXPRESS - سچ کی آواز</p>
 </div>
-<script>
-var id = new URLSearchParams(location.search).get("id");
-var x = {
-"RME100-03-26":"<h2 style='color:#2e7d32'>Press Card Verified ✅</h2><p><b>Name:</b> Umar Raza</p><p><b>CNIC:</b> 32304-1234567-8</p><p><b>Designation:</b> PRESS REPORTER</p><p><b>City:</b> MULTAN</p><p><b>Issue Date:</b> 31/05/2026</p><p><b>Valid Until:</b> 31/05/2027</p><p><b>Owner:</b> RANA SOHAIL NAWAZ</p><p><b>Card ID:</b> RME100-03-26</p><div class='footer'>This Card is Verified</div>",
-"RME100-04-26":"<h2 style='color:#2e7d32'>Press Card Verified ✅</h2><p><b>Name:</b> M Shahid</p><p><b>CNIC:</b> 36302-1075574-7</p><p><b>Designation:</b> PRESS REPORTER</p><p><b>City:</b> MULTAN</p><p><b>Issue Date:</b> 31/05/2026</p><p><b>Valid Until:</b> 31/05/2027</p><p><b>Owner:</b> RANA SOHAIL NAWAZ</p><p><b>Card ID:</b> RME100-04-26</p><div class='footer'>This Card is Verified</div>"
-};
-document.getElementById("d").innerHTML = x[id] || "<p style='color:red;text-align:center'>404 - Card Not Found</p>";
-</script>
+
+<div class="container">
+<div class="news-box">
+<h2>ملتان: صحافیوں کے پریس کارڈ ویریفکیشن پورٹل کا اجراء</h2>
+<p>روزنامہ ملتان ایکسپریس نے اپنے نمائندگان کے لیے آن لائن ویریفکیشن سسٹم متعارف کروا دیا ہے۔ اب کوئی بھی شخص کارڈ پر موجود QR کوڈ سکین کر کے رپورٹر کی تصدیق کر سکتا ہے۔ ادارے کے مطابق شفافیت اور عوام کے اعتماد کے لیے یہ اقدام اٹھایا گیا ہے۔</p>
+</div>
+
+<div class="news-box">
+<h2>ادارتی تحریر: سچ کی تلاش میں</h2>
+<p>ملتان ایکسپریس کا مقصد ہمیشہ سچ کو عوام تک پہنچانا رہا ہے۔ ہم بلا خوف و خطر حقائق قارئین کے سامنے لاتے ہیں۔ ہمارے نمائندگان ضلع بھر میں عوامی مسائل اجاگر کر رہے ہیں تاکہ حکام تک ان کی آواز پہنچ سکے۔</p>
+</div>
+
+<div class="news-box">
+<h2>رابطہ کریں</h2>
+<p><b>آفس:</b> ملتان، پنجاب<br>
+<b>ویریفکیشن پورٹل:</b> /press-card.html</p>
+</div>
+</div>
+
+<div class="footer">
+<p style="font-size:13px;line-height:1.6">
+روزنامہ ملتان ایکسپریس پاکستان کا ایک آزاد، غیر جانبدار اور عوامی فلاح کے لیے وقف اردو زبان کا اخبار ہے۔<br>
+ہماری اولین ترجیح حقائق پر مبنی، متوازن اور فوری خبر رسانی ہے۔<br><br>
+تمام حقوق محفوظ ہیں © 2026 روزنامہ ملتان ایکسپریس<br>
+Chief Editor: رانا سہیل نواز | 0302-5485338<br>
+Chief Executive Editor: ذیشان علی گِل | 0326-9304991
+</p>
+</div>
 </body>
 </html>
