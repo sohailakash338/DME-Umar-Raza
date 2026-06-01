@@ -1,39 +1,22 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Press Card Verification - M.Umar Raza</title>
+<title>Press Card Verification</title>
 <style>
-body{font-family:'Noto Nastaliq Urdu',Arial,sans-serif;background:#f0f2f5;margin:0;padding:20px}
-.card{max-width:420px;margin:auto;background:white;border-radius:15px;box-shadow:0 4px 20px rgba(0,0,0,0.1);overflow:hidden}
-.header{background:linear-gradient(135deg,#1e3c72,#2a5298);color:white;text-align:center;padding:20px}
-.header h1{margin:5px 0;font-size:22px}
-.header h2{margin:0;font-size:14px;font-weight:normal}
-.content{padding:25px}
-.row{display:flex;justify-content:space-between;margin:12px 0;padding-bottom:8px;border-bottom:1px solid #eee}
-.label{font-weight:bold;color:#2a5298}
-.value{color:#333;text-align:left}
-.status{background:#d4edda;color:#155724;text-align:center;padding:12px;border-radius:8px;margin-top:20px;font-weight:bold}
-.footer{text-align:center;font-size:12px;color:#777;margin-top:15px}
+body {font-family: Arial, sans-serif; background:#f4f4f4; display:flex; justify-content:center; align-items:center; height:100vh; margin:0;}
+.card {background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); text-align:center; width:300px;}
+h2 {color:#0d47a1;}
+p {margin:8px 0; font-size:16px;}
+.error {color:red; font-weight:bold;}
 </style>
 </head>
 <body>
-<div class="card">
-<div class="header">
-<h1>DAILY MULTAN EXPRESS</h1>
-<h2>پریس کارڈ ویریفیکیشن</h2>
+<div class="card" id="card">
+<h2>Loading...</h2>
 </div>
-<div class="content">
-<div class="row"><span class="label">نام:</span><span class="value">M.Umar Raza</span></div>
-<div class="row"><span class="label">عہدہ:</span><span class="value">DISTRICT REPORTER</span></div>
-<div class="row"><span class="label">CNIC:</span><span class="value">36302-1402052-5</span></div>
-<div class="row"><span class="label">پریس کارڈ نمبر:</span><span class="value">RME 100-03-26</span></div>
-<div class="row"><span class="label">موبائل:</span><span class="value">03705759105</span></div>
-<div class="row"><span class="label">کارآمد تا:</span><span class="value">31/05/2027</span></div>
-<div class="status">✓ یہ کارڈ تصدیق شدہ ہے</div>
-<div class="footer">Daily Multan Express © 2026</div>
-</div>
-</div>
-</body>
-</html>
+
+<script>
+const data = {
+  "RME100-03-
